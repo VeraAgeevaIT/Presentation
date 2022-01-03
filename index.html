@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Презентация Агеевой Веры</title>
+
+
+<style> /*задаем стили в head*/
+body {
+font: 11pt Tahoma; /* шрифт текста */
+margin: 0px; /* Отступы на странице */
+}
+h1 {
+font-size: 36px; /* Размер шрифта */
+margin: 0; /* Убираем отступы */
+color: white; /* Цвет текста */
+}
+h2 {
+margin-top: 0; /* Убираем отступ сверху */
+    color: deeppink; /* Цвет текста */
+}
+#header { /* Верхний блок */
+background: lightskyblue; /* Цвет фона */
+padding: 10px; /* Поля вокруг текста */
+}
+#kotik { /* Левая колонка */
+float: left; /* Обтекание справа */
+border: 10px solid pink; /* Параметры рамки вокруг */
+width: 20%; /* Ширина колонки */
+padding: 5px; /* Поля вокруг текста */
+margin: 10px 10px 20px 5px; /* Значения отступов */
+}
+#slonik { /* Правая колонка */
+margin: 10px 5px 20px 25%; /* Значения отступов */
+padding: 50px; /* Поля вокруг текста */
+border: 15px solid rosybrown; /* Параметры рамки */
+position: relative;
+overflow: hidden
+}
+#footer { /* Нижний блок */
+    background: black; /* Цвет фона */
+    padding: 5px; /* Поля вокруг текста */
+    color: #fff; /* Цвет текста */
+    clear: left; /* Отменяем действие float */
+}
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+#triangle_rotation {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background-image: url(AJ_Buddy_graduate.svg);
+    left: 150px;
+    top: 50px;
+    background-size: contain;
+    /*cover масштабирует изображение с сохранением пропорций так, чтобы его ширина или высота равнялась ширине или высоте блока.*/
+    z-index: -1;
+    /*Если немного сжать окно браузера, то треугольник уже не перекрывает заголовок. Сделал таки через средства разработчика! Убил больше час времени*/
+    animation-name: rotation;
+    animation-duration: 21s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+}
+</style>
+
+
+</head>
+
+<body>
+<div id="header"><h1>&hearts; Агеева Вера &hearts;</h1></div>
+
+<div id="kotik">
+    <img src="photoVera.JPG" width="100%" height="100%" alt="фото Веры сломалось">
+</div>
+
+<div id="slonik">
+    <div id="triangle_rotation"></div>
+    <h2>&larr; Резюме </h2>
+    <p>Выпускница лицея №2, 11й класс с физ/мат уклоном.</p>
+
+    <p>С 3 до 6 лет училась в школе раннего развития </p>
+    <p>Параллельно с гимназией №75 училась в 1ой музыкальной школе имени Л.П.Александровской </p>
+    <p>Средний балл аттестата 9,5</p>
+    <p><br></p>
+
+    <p>Учусь:
+    <li>верстать</li>
+    <li>делать одностраничные сайты</li>
+    </p>
+    <p><br></p>
+
+    <p>Планирую изучить:
+    <li>HTML5</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+    <li>React</li>
+    <p><br></p>
+
+    </p>
+    <p> Хочу поступить в БГУ, как и моя старшая сестра<br />
+        — хочу стать программистом, React-разработчиком <br />
+        </p>
+    <p><br></p>
+    <a href="https://bsu.by/kafedry/kafedra-tekhnologiy-programmirovaniya-d" class="header__link">Хочу учиться здесь &rarr;</a>
+    <p><br></p>
+    <a href="https://bsu.by/faculties/fizicheskiy-fakultet-d" class="header__link">или здесь &rarr;</a>
+    <p><br></p>
+    <a href="https://www.itechart.by/" class="header__link">Хочу работать здесь &rarr;</a>
+    <p><br></p>
+    <a href="https://www.epam.com/" class="header__link">или здесь &rarr;</a>
+</div>
+<div id="footer">&copy; Агеев Дмитрий, папа)</div>
+</body>
+</html>
